@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre de Tu Agencia | Marketing Digital</title>
+    <title>Rifx Marketing | Agencia Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
     <nav class="p-6 flex justify-between items-center bg-white shadow-sm">
-        <h1 class="text-2xl font-bold text-blue-600">MiAgencia.</h1>
+        <h1 class="text-2xl font-bold text-blue-600">Rifx Marketing.</h1>
         <ul class="flex gap-6 font-medium">
             <li>Servicios</li>
             <li>Portafolio</li>
@@ -20,5 +22,23 @@
         <p class="text-xl text-gray-600 mb-8">Estrategias de SEO, ADS y Contenido con resultados reales.</p>
         <button class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition">Agendar Auditoría</button>
     </section>
+
+    <script>
+      if (window.netlifyIdentity) {
+        // Al iniciar, si el usuario se loguea, lo mandamos al admin
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+
+        // Este pedazo es el que detecta el clic en el correo de "Reset Password"
+        window.netlifyIdentity.on("init", () => {
+          window.netlifyIdentity.setProxyUrl("https://rifx-marketing.netlify.app/.netlify/identity");
+        });
+      }
+    </script>
 </body>
 </html>
