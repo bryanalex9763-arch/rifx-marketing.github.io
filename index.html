@@ -3,296 +3,375 @@
 <html class="scroll-smooth" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>RIFX MARKETING | Transformamos clics en facturación real</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Moonr - Marketing Digital</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Netlify Identity widget in head -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#f37021", // Logo Orange
-              "on-primary": "#ffffff",
-              "secondary": "#002855", // Logo Dark Blue
-              "on-secondary": "#ffffff",
-              "background": "#fbf9f8",
-              "surface": "#fbf9f8",
-              "on-surface": "#002855",
-              "surface-variant": "#e4e2e1",
-              "on-surface-variant": "#434653",
-              "outline": "#737784",
-              "primary-fixed": "#ffdbc9",
-              "secondary-fixed": "#d6e2ff",
-              "surface-container": "#f0eded",
-              "surface-container-low": "#f6f3f2",
-              "surface-container-highest": "#e4e2e1"
-            },
-            fontFamily: {
-              "headline": ["Inter"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space-dark': '#0B0D17',
+            'space-blue': '#15192B',
+            'space-orange': '#FF7A00',
+            'space-orange-hover': '#E56D00',
+            'space-glow': 'rgba(255, 122, 0, 0.5)',
+            'card-bg': 'rgba(21, 25, 43, 0.7)',
+            'card-border': 'rgba(255, 255, 255, 0.1)'
           },
-        },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif']
+          },
+          backgroundImage: {
+            'stars': 'radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)), radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)), radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0,0,0,0)), radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)), radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)), radial-gradient(1px 1px at 160px 120px, #ddd, rgba(0,0,0,0))'
+          }
+        }
       }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .diffusion-shadow {
-            box-shadow: 0 20px 40px rgba(0, 40, 85, 0.08);
-        }
-        .orange-gradient {
-            background: linear-gradient(135deg, #f37021 0%, #ff8c42 100%);
-        }
-        .blue-gradient {
-            background: linear-gradient(135deg, #002855 0%, #004080 100%);
-        }
-    </style>
+    }
+  </script>
+<style data-purpose="custom-utilities">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap');
+
+    body {
+      background-color: #0B0D17;
+      color: #ffffff;
+      background-image: 
+        radial-gradient(circle at 15% 50%, rgba(255, 122, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(21, 25, 43, 0.8) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    /* Starry background effect */
+    .bg-stars {
+      background-color: transparent;
+      background-image: 
+        radial-gradient(1px 1px at 25px 5px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 50px 25px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 125px 20px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1.5px 1.5px at 50px 75px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(2px 2px at 15px 125px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(2.5px 2.5px at 110px 80px, white, rgba(255, 255, 255, 0));
+      background-size: 200px 200px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    .glass-card {
+      background: linear-gradient(145deg, rgba(21, 25, 43, 0.6) 0%, rgba(11, 13, 23, 0.8) 100%);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    .glow-border {
+      position: relative;
+    }
+    
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      background: linear-gradient(45deg, #FF7A00, transparent, #15192B);
+      z-index: -1;
+      border-radius: inherit;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+    }
+
+    .glow-border:hover::before {
+      opacity: 1;
+    }
+
+    .input-field {
+      background-color: rgba(21, 25, 43, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .input-field:focus {
+      border-color: #FF7A00;
+      box-shadow: 0 0 10px rgba(255, 122, 0, 0.3);
+      outline: none;
+    }
+
+    .btn-glow {
+      box-shadow: 0 0 15px rgba(255, 122, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn-glow:hover {
+      box-shadow: 0 0 25px rgba(255, 122, 0, 0.7);
+      transform: translateY(-2px);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-surface text-on-surface font-body antialiased">
-<!-- Netlify Identity widget in body -->
-<!-- Top Navigation Bar -->
-<header class="fixed top-0 w-full z-50 bg-[#fbf9f8]/80 backdrop-blur-xl border-b border-secondary/5">
-<nav class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
+<body class="relative min-h-screen font-sans antialiased overflow-x-hidden">
+<div class="bg-stars pointer-events-none fixed"></div>
+<!-- BEGIN: Header -->
+<header class="container mx-auto px-6 py-8 flex justify-between items-center relative z-10">
 <div class="flex items-center gap-2">
-<img alt="RIFX Marketing Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ug9JDrqqO0Ee9IdKccIgxsJH2xoq7BJILjuPGOx3pQVDiMgzq3DXu2ZfkSREtXR_LK_lK442PQlITaiO7son0cGZVwvCQsL9CKG0MD4uuy3sarj2fLG3TxfHsi6gjk2o3DRYHBJc-wBVr_b5E4vz4HuAkI1RP9xDPDctzkvbzYmkBTCYmQdoNzPCaiZ84ENlAXuoAdV3asvtkPR6e2j5SU7uDUxUZ3TMbWhBPo83FhK0TxK_DOnQAyM_aZTFBLN5SKtPUmGUMp_Vw"/>
-<div class="text-xl font-extrabold tracking-tighter text-secondary hidden sm:block">RIFX MARKETING</div>
+<span class="text-space-orange font-bold text-xl tracking-wider">RF</span>
+<span class="text-white font-heading font-black text-2xl tracking-widest">MOONR</span>
 </div>
-<div class="hidden md:flex items-center space-x-10">
-<a class="text-secondary hover:text-primary transition-colors font-semibold" href="#servicios">Servicios</a>
-<a class="text-secondary hover:text-primary transition-colors font-semibold" href="#metodologia">Metodología</a>
-<a class="text-secondary hover:text-primary transition-colors font-semibold" href="#resultados">Resultados</a>
-<a class="text-secondary hover:text-primary transition-colors font-semibold" href="#contacto">Contacto</a>
-</div>
-<div class="flex items-center gap-4">
-<button class="bg-secondary text-white px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-secondary/90 transition-all duration-300 active:scale-95">
-                Empezar Ahora
-            </button>
-</div>
-</nav>
 </header>
+<!-- END: Header -->
 <main>
-<!-- Hero Section -->
-<section class="relative pt-44 pb-32 px-8 overflow-hidden">
-<div class="max-w-7xl mx-auto text-center relative z-10">
-<span class="inline-block px-4 py-1.5 mb-6 text-[0.75rem] font-extrabold tracking-[0.05em] uppercase bg-primary/10 text-primary rounded-full">Performance Marketing Agency</span>
-<h1 class="text-6xl md:text-8xl font-extrabold tracking-tight text-secondary mb-8 leading-[1.05]">
-                Transformamos clics en <br/>
-<span class="text-primary">facturación real</span>
-</h1>
-<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed">
-                Somos especialistas en SEO, Ads y Contenido diseñados para escalar modelos de negocio de alto impacto. Sin métricas de vanidad, solo resultados.
+<!-- BEGIN: Hero Section -->
+<section class="container mx-auto px-6 pt-12 pb-24 lg:py-20 relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+<!-- Hero Content & Form -->
+<div class="w-full lg:w-1/2 flex flex-col gap-6">
+<h1 class="text-5xl lg:text-7xl font-black uppercase leading-tight text-white drop-shadow-lg">
+            ¡TU MARCA <br/>
+            NECESITA UN <br/>
+            LANZAMIENTO <br/>
+            ESPACIAL!
+          </h1>
+<p class="text-gray-300 text-lg lg:text-xl max-w-md">
+            Marketing digital de vanguardia que te hace brillar.<br/>
+            Es hora de despegar.
+          </p>
+<!-- Contact Form -->
+<form class="flex flex-col gap-4 mt-6 max-w-md w-full">
+<input class="input-field rounded-lg px-4 py-3 w-full bg-[#15192B]/50 border border-[#2A3B5C] text-white placeholder-gray-500 focus:outline-none focus:border-space-orange focus:ring-1 focus:ring-space-orange" placeholder="Nombre completo" required="" type="text"/>
+<input class="input-field rounded-lg px-4 py-3 w-full bg-[#15192B]/50 border border-[#2A3B5C] text-white placeholder-gray-500 focus:outline-none focus:border-space-orange focus:ring-1 focus:ring-space-orange" placeholder="Correo electrónico" required="" type="email"/>
+<input class="input-field rounded-lg px-4 py-3 w-full bg-[#15192B]/50 border border-[#2A3B5C] text-white placeholder-gray-500 focus:outline-none focus:border-space-orange focus:ring-1 focus:ring-space-orange" placeholder="Sitio Web" type="url"/>
+<textarea class="input-field rounded-lg px-4 py-3 w-full resize-none bg-[#15192B]/50 border border-[#2A3B5C] text-white placeholder-gray-500 focus:outline-none focus:border-space-orange focus:ring-1 focus:ring-space-orange" placeholder="Mensaje" rows="3"></textarea>
+<button class="bg-space-orange hover:bg-space-orange-hover text-white font-bold uppercase py-4 px-8 rounded-lg mt-2 btn-glow tracking-wider transition-colors" type="submit">
+              ¡LANZA MI CAMPAÑA!
+            </button>
+</form>
+</div>
+<!-- Hero Image -->
+<div class="w-full lg:w-1/2 relative flex justify-center lg:justify-end animate-[bounce_4s_infinite]">
+<!-- Astronaut Placeholder -->
+<img alt="Astronaut on a rocket" class="w-full max-w-lg object-contain drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKAOMeFoZHfJJvX0ACcoIg3lV2lpS4wZBc7IxUsnCp_FR62ssiCmOxdfG27rIlainkawvlFCOxR2c6yp-4EHJY5oI2EXA1ywbbv2jUDiToY7j9gF9wa7gIJTdJnIn2r4Ktoz4f9FryL_3n4Oh-GOx22AO2VtTFNWc9UnVsnP2oZDxaf_ATjDN49okpnfMBeJPZown5ivn0hR-aOBPHQ9MXprlmVZJxTC_zecu6U20lxFPq4hLbdB679SOw9KZn6VTQbhilhpXG8Gk"/>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Mission Section -->
+<section class="container mx-auto px-6 py-20 relative z-10">
+<div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row border border-[#4A6B9C]/50 bg-white/5 backdrop-blur-md shadow-[0_0_15px_rgba(74,107,156,0.2)]">
+<!-- Mission Text -->
+<div class="p-10 md:p-16 w-full md:w-1/2 flex flex-col justify-center">
+<span class="text-gray-400 uppercase tracking-widest text-sm font-semibold mb-2">QUIÉNES SOMOS</span>
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Nuestra Misión Estelar</h2>
+<div class="space-y-6 text-gray-300 leading-relaxed">
+<p>
+<strong class="text-white">Misión:</strong> Tu Éxito es Nuestra Órbita.<br/>
+              Usamos Tecnología y creatividad avanzadas para llevarte a nuevas órbitas.
             </p>
-<div class="flex flex-col md:flex-row items-center justify-center gap-4">
-<button class="orange-gradient text-white px-10 py-5 rounded-xl font-bold text-lg diffusion-shadow hover:-translate-y-1 transition-all duration-300">
-                    Agendar Auditoría Gratis
-                </button>
-<button class="bg-secondary text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-secondary/90 transition-all duration-300">
-                    Ver Casos de Éxito
-                </button>
+<p>
+<strong class="text-white">Visión:</strong> Tu Éxito es Nuestra Órbita.<br/>
+              Usamos Tecnología y creatividad avanzadas para llevarte a nuevas órbitas.
+            </p>
 </div>
 </div>
-<!-- Architectural background elements -->
-<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-40">
-<div class="absolute top-[10%] left-[5%] w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-<div class="absolute bottom-[10%] right-[5%] w-[30rem] h-[30rem] bg-secondary/10 rounded-full blur-3xl"></div>
-</div>
-</section>
-<!-- Trust Section -->
-<section class="py-16 bg-surface-container-low">
-<div class="max-w-7xl mx-auto px-8">
-<p class="text-center text-[0.75rem] font-bold tracking-[0.1em] text-on-surface-variant/60 uppercase mb-10">Empresas que confían en nuestra arquitectura de crecimiento</p>
-<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale contrast-125">
-<img alt="Partner" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqd1eqFVUb7naniYMkRrsPvlrMg5Ka7yQpcgtTFejZKHSRNZnzeZ4yAjsPIHuR29dsC9tZpQDEJdVCGvknbL-o6ndoFaZBqENZYS-rfphH7EUH-p-7ttSOGHt7wWjTlQyAqbTebH_uulqymtJD2wif-X1tP7t8L1_ZLNEv22JrG_4dVIGI8QX2AAYt0lU6Loc0r1x2EXOEHUvnVNL-UKL9jFjd779D9oXkPPscZjgmoodh9-GDwE-UPNGE2S3IvNUuLJ6_8Cnqepw"/>
-<img alt="Partner" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyABteWAlA9X74HcfVzoNZe4NCKBlceuXoG63s6MydE7VRvi8bUvCe4rbiz-98k7SroBA2GG1Uqgcn2zoW6TRcVfn_jGB9B-mqG1eD5sQlCMSo6px4_VI8HG-cqMnpxF5r_txmKmfQ6Jjg-JZJKozIh3_RTsaoyweJu3El2-auaG1ZC5bToAiTzgsAB1LdtR1m4PNsPg76UBwrclW97RrWYLXWumwV4vbY9WpjcHVZG-ZcqfNI3eWym4rZhoyG9sHGyq1n-4BjDJc"/>
-<img alt="Partner" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Ve6tVvolDtUMClRlM1KeqCXRh7hHT3BI1kb5f7lOI0SOV0ZwUQ6LNzWcYLmChimEhpxqS6tIZhfmfORJaQc9EX7OIFSZaAIiQ-WvqmRLBWiVRUqclXgI9bYIG8U96DItVO5RJLjr0Vg0BnmxdLWoWZdhFU0ObPzwXnMZxZ2p0bN0DQ6qR8jVNpL2Zg2oM106RuwhxIFECwSEnXGX2WaNZY805RFC5mCwz-DgaOgZYAajNiimPOPtUQfghzXA_6luftE4rbQJwQE"/>
-<img alt="Partner" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHW5vhuS12uF8EPWaOoP1Mmvts_tPWlxtfsT1gC9vmCDs3cgaWh4qY-AnYM_VStk4Is21fnpPXEmN6WT8VE449uATI78lZpkiRqab4joE715WcZxTlKCHLz7vcTPBWsno73muoQJeIYOWrvNj3fnSjo4E6ee9LgBYItMy7r6fhcrv0kVLav0VV-IDPqdaIz8O_vE7d91N04aV0ENJRd4hjVZ80h-0q3hDRaTCmdwAkpaDVruwRRlxFMRxcwS7VnrNyn0YZvPVvDbo"/>
-<img alt="Partner" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVCOnKRxM8YBSwJPq7hzwPKQEks5TBPM2RUFz_PX7ht-HTqwD5gBTt04tYJ1BODlVF1bp5rWCntqnbEFvz9z7miTzz7C08HV1-zoFdFmZh0PHjui18t02VuLLCe20aOMmmQgntoI19GWBRqf6R4VdIFhwRlftYxuMvqzoiVxKc6ZnQOMCmaVnM5Tw--YKwIxI77H4b9zfXPgJMXPO44qWbPTQcP0wth7AOKiF50Fij-AQ0Tv9RoVxfxWYT53guwbGxA6P4cjfS27g"/>
+<!-- Mission Image -->
+<div class="w-full md:w-1/2 h-64 md:h-auto relative">
+<!-- Space Station Placeholder -->
+<img alt="Futuristic Space Station" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMsfyASgHGY7Q7z03Rg8BQLIdUukt2_4D9HbkqGeslBaNjFt5nf6qUlkemWd6m5VlAFMFGnEWSnSuOsFOUxt7G5emTFnTAUxx9YRxKQaxBPkRdkmH8NfJXNQ7irnCQ--yRO_XXmBm2v6Q94Ggp3VystCvIS5_yjNHVof3r_KeJwWYnAh2YUwWCwAciJPk0ij2lj96KhAkDg9lHwTVaTFkXCdcQ71DMyHTxUBhsJTu09bZV7KlObz6YAHephw3tSlzvZSv0m0SuC1U"/>
+<div class="absolute inset-0 bg-gradient-to-r from-[#0B0D17] via-transparent to-transparent hidden md:block"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0D17] via-transparent to-transparent md:hidden"></div>
 </div>
 </div>
 </section>
-<!-- Services Section -->
-<section class="py-32 px-8 bg-surface" id="servicios">
-<div class="max-w-7xl mx-auto">
-<div class="mb-20">
-<h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-secondary">Servicios de Élite</h2>
-<p class="text-on-surface-variant text-lg max-w-xl">Ejecución técnica impecable combinada con visión estratégica a largo plazo.</p>
+<!-- END: Mission Section -->
+<!-- BEGIN: Services Section -->
+<section class="container mx-auto px-6 py-20 relative z-10">
+<h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Gama de Servicios Estelares que Convierte.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<!-- Service Card 1 -->
+<div class="glass-card rounded-2xl p-8 text-center glow-border group">
+<div class="w-16 h-16 mx-auto bg-space-blue rounded-xl flex items-center justify-center mb-6 border border-gray-700 group-hover:border-space-orange transition-colors">
+<!-- Icon Placeholder -->
+<div class="w-8 h-8 bg-green-500/20 rounded flex items-center justify-center">
+<span class="text-green-500 text-xs">SEO</span>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- SEO Avanzado -->
-<div class="group bg-white p-10 rounded-xl diffusion-shadow hover:-translate-y-2 transition-all duration-500 border border-secondary/5">
-<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-8">
-<span class="material-symbols-outlined text-primary text-3xl">search</span>
 </div>
-<h3 class="text-2xl font-bold mb-4 text-secondary">SEO Avanzado</h3>
-<p class="text-on-surface-variant leading-relaxed mb-8">No solo posicionamos palabras, dominamos intenciones de búsqueda para atraer tráfico que convierte.</p>
-<ul class="space-y-3 text-sm font-medium text-secondary">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Auditoría Técnica</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Linkbuilding de Autoridad</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> SEO Semántico</li>
-</ul>
+<h3 class="text-xl font-bold text-space-orange mb-4">SEO<br/>Espacial</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+            Colóquese en la órbita donde sus prospectos lo encuentran con las búsquedas que le importan.
+          </p>
 </div>
-<!-- Publicidad Pagada -->
-<div class="group bg-white p-10 rounded-xl diffusion-shadow hover:-translate-y-2 transition-all duration-500 md:translate-y-4 border border-secondary/5">
-<div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-8">
-<span class="material-symbols-outlined text-secondary text-3xl">bolt</span>
+<!-- Service Card 2 -->
+<div class="glass-card rounded-2xl p-8 text-center glow-border group">
+<div class="w-16 h-16 mx-auto bg-space-blue rounded-xl flex items-center justify-center mb-6 border border-gray-700 group-hover:border-space-orange transition-colors">
+<!-- Icon Placeholder -->
+<div class="w-8 h-8 bg-blue-500/20 rounded flex items-center justify-center">
+<span class="text-blue-500 text-xs">Social</span>
 </div>
-<h3 class="text-2xl font-bold mb-4 text-secondary">Publicidad Pagada</h3>
-<p class="text-on-surface-variant leading-relaxed mb-8">Estrategias de PPC en Google y Meta enfocadas en el Retorno de Inversión Publicitaria (ROAS).</p>
-<ul class="space-y-3 text-sm font-medium text-secondary">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Google Search &amp; Shopping</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Meta Ads Scale</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Retargeting Dinámico</li>
-</ul>
 </div>
-<!-- Creación de Contenido -->
-<div class="group bg-white p-10 rounded-xl diffusion-shadow hover:-translate-y-2 transition-all duration-500 border border-secondary/5">
-<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-8">
-<span class="material-symbols-outlined text-primary text-3xl">video_library</span>
+<h3 class="text-xl font-bold text-space-orange mb-4">Redes Sociales<br/>Galácticas</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+            Estrategias estratégicas y contenido que atrape a su audiencia.
+          </p>
 </div>
-<h3 class="text-2xl font-bold mb-4 text-secondary">Creación de Contenido</h3>
-<p class="text-on-surface-variant leading-relaxed mb-8">Storytelling visual y estratégico que humaniza tu marca y acelera la decisión de compra.</p>
-<ul class="space-y-3 text-sm font-medium text-secondary">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Video Marketing (UGC)</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Copywriting Persuasivo</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Gestión de Canales</li>
-</ul>
+<!-- Service Card 3 -->
+<div class="glass-card rounded-2xl p-8 text-center glow-border group">
+<div class="w-16 h-16 mx-auto bg-space-blue rounded-xl flex items-center justify-center mb-6 border border-gray-700 group-hover:border-space-orange transition-colors">
+<!-- Icon Placeholder -->
+<div class="w-8 h-8 bg-teal-500/20 rounded flex items-center justify-center">
+<span class="text-teal-500 text-xs">Ads</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-space-orange mb-4">Anuncios de<br/>Alta Velocidad</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+            Campañas de pago segmentadas que generan ROI a corto plazo rápidamente.
+          </p>
+</div>
+</div>
+</section>
+<!-- END: Services Section -->
+<!-- BEGIN: Testimonials Section -->
+<section class="container mx-auto px-6 py-20 relative z-10">
+<h2 class="text-3xl md:text-4xl font-bold text-center mb-16 leading-tight">
+        Nuestros Clientes de Realeza:<br/>
+        Testimonios de Élite
+      </h2>
+<div class="flex items-center justify-center gap-4 max-w-6xl mx-auto">
+<!-- Prev Button -->
+<button class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-space-orange transition-colors hidden md:flex shrink-0">
+<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 flex-grow">
+<!-- Testimonial 1 -->
+<div class="glass-card rounded-3xl p-8 pt-12 relative text-center mt-8">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2">
+<img alt="Client" class="w-20 h-20 rounded-full border-4 border-[#0B0D17] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc8nMNTBgieIGRd1nl_70O1CTl0hXCtkEyqOVFXvQl3-KsWJaqRiqbwFIXE0N_-JHLGYK2yng1IKBnuOfpbHvYo9DN-s46NAM5SxfhvaBKHRv-rSxT4b9AhfYSh6uZbnx6E44wYv71BHsKbtcc7Sjvh-bi7sUEdH2rBd7mHYEzC4f8jfnuX6kJYFP4BDH6TCStAnaTzJrlvswNkFpC2dgThogy8KNfSXyWpyVhH0zGgNWP-nIcwiQOPoUZyfcAHeyjHTs7M5SOYkY"/>
+</div>
+<div class="text-space-orange mb-4">★★★★★</div>
+<h4 class="font-bold text-lg mb-4">Resultados de Realeza</h4>
+<p class="text-gray-400 text-sm italic mb-6">
+              "Su dedicación nos ha llevado a alcanzar metas que parecían inalcanzables. Extraordinario desempeño y atención a los detalles."
+            </p>
+<div class="text-space-orange font-semibold text-sm">Carolina Bermúdez</div>
+<div class="text-gray-500 text-xs">Directora</div>
+</div>
+<!-- Testimonial 2 (Active/Center) -->
+<div class="glass-card rounded-3xl p-8 pt-12 relative text-center mt-8 md:-translate-y-4 border-space-orange/30 shadow-[0_0_30px_rgba(255,122,0,0.1)]">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2">
+<img alt="Client" class="w-20 h-20 rounded-full border-4 border-[#0B0D17] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzFtPHNT8BjBqEXrnX4y_LA6qQD4fH4kYFAS0WyTNh1COy6djV-9YOBp_k7BXXg1Af8Cb-OvlSVyCJE-oMk0NPxMmq3bW-i7lHZjCmweu4MHDx7x6al3P-7cgLbuB_Q5zmE1N01awwxeSleQEt7ctfHvCuHc09g4gnXqjowzk9PHGr4GNE-bsbtVKoj61BT3Aq_nzjUyKwf-t2wwaCT3L4Py-VLlsueMyalfVCSugB9Y1bKtkuuQZxPtgeMSQsDeCKCf6qJl8wRY0"/>
+</div>
+<div class="text-space-orange mb-4">★★★★★</div>
+<h4 class="font-bold text-lg mb-4">Resultados de Élite</h4>
+<p class="text-gray-400 text-sm italic mb-6">
+              "Un equipo increíble. Hemos visto un aumento dramático en nuestras métricas y ventas gracias a su estrategia excepcional."
+            </p>
+<div class="text-space-orange font-semibold text-sm">Martín Garcés</div>
+<div class="text-gray-500 text-xs">CEO</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="glass-card rounded-3xl p-8 pt-12 relative text-center mt-8">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2">
+<img alt="Client" class="w-20 h-20 rounded-full border-4 border-[#0B0D17] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ0PzalmCqFe452Jl_eAAfu5kuUdncFA8CqWxf2HWWJ_IK9fLY-l422sVRogIzl8NhaYO2d9FHX7R02Lr4Jr4aMo-8KDhyMSGN2lEIL07GGahrW0PcRgHIYGswbTlaKpQQYyAAgl_yQfHu2kRR2Q4VK8G9w1kUdJ5baYceF_IZQKIbCfa3XBYxyaqqWQz4NipGH6cF0X2V2zVLvmOkVJmNpLYQAuEHiRAFWFoWNnfmhcBu9005sMy8WHkZiVtCEotmzecjBaDfRH0"/>
+</div>
+<div class="text-space-orange mb-4">★★★★★</div>
+<h4 class="font-bold text-lg mb-4">Resultados de Alta Gama</h4>
+<p class="text-gray-400 text-sm italic mb-6">
+              "Se enfocan en tus metas. Logramos escalar en tiempo récord y superar a la competencia en un mercado muy saturado."
+            </p>
+<div class="text-space-orange font-semibold text-sm">Valeria Santos</div>
+<div class="text-gray-500 text-xs">Fundadora</div>
+</div>
+</div>
+<!-- Next Button -->
+<button class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-space-orange transition-colors hidden md:flex shrink-0">
+<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- Pagination Dots -->
+<div class="flex justify-center gap-2 mt-8">
+<div class="w-8 h-2 rounded-full bg-space-orange"></div>
+<div class="w-2 h-2 rounded-full bg-gray-600"></div>
+<div class="w-2 h-2 rounded-full bg-gray-600"></div>
+</div>
+</section>
+<!-- END: Testimonials Section -->
+<!-- BEGIN: Process Section -->
+<section class="container mx-auto px-6 py-20 relative z-10 border-t border-b border-gray-800/50 mt-10">
+<h2 class="text-xl md:text-2xl font-bold text-center mb-12 uppercase tracking-widest text-gray-300">
+        Tu Ruta Al Lanzamiento Exitoso
+      </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+<!-- Step 1 -->
+<div class="flex gap-4 items-start">
+<div class="text-5xl font-black text-white">1</div>
+<div>
+<div class="text-sm font-bold text-space-orange mb-1">Step 1</div>
+<p class="text-sm text-gray-400">Evaluación de tus necesidades. Acercamiento espacial.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-4 items-start">
+<div class="text-5xl font-black text-white">2</div>
+<div>
+<div class="text-sm font-bold text-space-orange mb-1">Step 2</div>
+<p class="text-sm text-gray-400">Creación de un plan estratégico de vuelo.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-4 items-start">
+<div class="text-5xl font-black text-white">3</div>
+<div>
+<div class="text-sm font-bold text-space-orange mb-1">Step 3</div>
+<p class="text-sm text-gray-400">Contacto con tu audiencia ideal y directo.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-4 items-start">
+<div class="text-5xl font-black text-white">4</div>
+<div>
+<div class="text-sm font-bold text-space-orange mb-1">Step 4</div>
+<p class="text-sm text-gray-400">Contacto con tu lanzamiento exitoso y directo.</p>
 </div>
 </div>
 </div>
 </section>
-<!-- Results Section / 'Por qué Rifx' -->
-<section class="py-32 px-8 bg-surface-container" id="metodologia">
-<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-<div>
-<span class="text-[0.75rem] font-extrabold tracking-[0.1em] text-primary uppercase mb-6 block">Nuestra Ventaja</span>
-<h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 leading-tight text-secondary">Por qué Rifx es la pieza que falta en tu equipo</h2>
-<p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
-                    A diferencia de las agencias tradicionales, no nos obsesionamos con los "likes" o el "alcance". Nos obsesionamos con el LTV de tus clientes y la eficiencia de tu adquisición.
-                </p>
-<div class="space-y-8">
-<div class="flex gap-6">
-<div class="shrink-0 w-12 h-12 bg-white rounded-lg diffusion-shadow flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">analytics</span>
-</div>
-<div>
-<h4 class="text-xl font-bold mb-2 text-secondary">Decisiones basadas en datos</h4>
-<p class="text-on-surface-variant">Cada euro invertido tiene una trazabilidad clara hasta la venta final.</p>
-</div>
-</div>
-<div class="flex gap-6">
-<div class="shrink-0 w-12 h-12 bg-white rounded-lg diffusion-shadow flex items-center justify-center">
-<span class="material-symbols-outlined text-secondary">groups</span>
-</div>
-<div>
-<h4 class="text-xl font-bold mb-2 text-secondary">Equipo Senior</h4>
-<p class="text-on-surface-variant">Tu cuenta no será gestionada por becarios. Solo consultores con más de 5 años de experiencia.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative">
-<div class="bg-white p-12 rounded-xl diffusion-shadow relative z-10 border border-secondary/5">
-<div class="grid grid-cols-1 gap-12">
-<div>
-<div class="text-[0.75rem] font-bold text-on-surface-variant/60 uppercase mb-2 tracking-widest">Crecimiento promedio anual</div>
-<div class="text-7xl font-extrabold text-secondary flex items-baseline gap-2">
-                                +142<span class="text-primary text-4xl">%</span>
-</div>
-<div class="h-2 w-full bg-surface-container mt-6 rounded-full overflow-hidden">
-<div class="h-full bg-primary w-[142%]"></div>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-8">
-<div>
-<div class="text-[0.7rem] font-bold text-on-surface-variant/60 uppercase mb-1">ROAS Promedio</div>
-<div class="text-4xl font-extrabold text-secondary">5.8x</div>
-</div>
-<div>
-<div class="text-[0.7rem] font-bold text-on-surface-variant/60 uppercase mb-1">Inversión Gestionada</div>
-<div class="text-4xl font-extrabold text-secondary">+2M€</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Decorative architectural element -->
-<div class="absolute -bottom-6 -right-6 w-full h-full bg-primary/10 rounded-xl -z-10 translate-x-4 translate-y-4"></div>
-</div>
-</div>
+<!-- END: Process Section -->
+<!-- BEGIN: CTA Section -->
+<section class="container mx-auto px-6 py-24 relative z-10 text-center">
+<h2 class="text-3xl md:text-5xl font-black uppercase mb-8 leading-tight">
+        ¡NO TE QUEDES EN TIERRA!<br/>
+        ÚNETE A LA ÉLITE ESPACIAL.
+      </h2>
+<button class="bg-space-orange hover:bg-space-orange-hover text-white font-bold uppercase py-4 px-10 rounded-full btn-glow tracking-wider transition-all inline-block shadow-[0_0_20px_rgba(255,122,0,0.5)] hover:shadow-[0_0_30px_rgba(255,122,0,0.8)]">
+        SOLICITA TU ESTRATEGIA ESTELAR GRATUITA
+      </button>
 </section>
-<!-- CTA Section -->
-<section class="py-32 px-8" id="contacto">
-<div class="max-w-5xl mx-auto blue-gradient rounded-[2rem] p-16 text-center text-white relative overflow-hidden">
-<div class="relative z-10">
-<h2 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight">¿Listo para escalar tu facturación?</h2>
-<p class="text-white/80 text-lg max-w-2xl mx-auto mb-12">
-                    Analizaremos tu situación actual y te entregaremos una hoja de ruta personalizada. Sin compromiso, 100% valor real.
-                </p>
-<button class="bg-primary text-white px-12 py-5 rounded-xl font-bold text-xl hover:bg-primary/90 transition-all duration-300 diffusion-shadow">
-                    Agendar Auditoría Gratis
-                </button>
-</div>
-<!-- Abstract pattern overlay -->
-<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-</div>
-</section>
+<!-- END: CTA Section -->
 </main>
-<!-- Footer -->
-<footer class="bg-secondary text-white pt-24 pb-12 border-t border-white/10">
-<div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-start gap-16 mb-20">
-<div class="max-w-sm">
-<div class="flex items-center gap-3 mb-6">
-<img alt="RIFX Marketing Logo" class="h-16 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/ADBb0ug9JDrqqO0Ee9IdKccIgxsJH2xoq7BJILjuPGOx3pQVDiMgzq3DXu2ZfkSREtXR_LK_lK442PQlITaiO7son0cGZVwvCQsL9CKG0MD4uuy3sarj2fLG3TxfHsi6gjk2o3DRYHBJc-wBVr_b5E4vz4HuAkI1RP9xDPDctzkvbzYmkBTCYmQdoNzPCaiZ84ENlAXuoAdV3asvtkPR6e2j5SU7uDUxUZ3TMbWhBPo83FhK0TxK_DOnQAyM_aZTFBLN5SKtPUmGUMp_Vw"/>
-<div class="text-2xl font-extrabold tracking-tighter">RIFX MARKETING</div>
+<!-- BEGIN: Footer -->
+<footer class="border-t border-gray-800/50 bg-[#07090F] py-8 relative z-10">
+<div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-xs text-gray-500 text-center md:text-left">
+<p>Derechos de autor Reservados</p>
+<p>© 2024 MOONR</p>
+<p>Políticas y Privacidad</p>
 </div>
-<p class="text-white/60 leading-relaxed">
-                    Arquitectura de crecimiento digital para marcas con ambición global. Transformamos la complejidad del marketing en resultados predecibles.
-                </p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-<div>
-<h5 class="text-sm font-bold uppercase tracking-widest mb-6">Agencia</h5>
-<ul class="space-y-4 text-white/60 text-sm">
-<li><a class="hover:text-primary transition-colors" href="#">Sobre nosotros</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Casos de éxito</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Carreras</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-sm font-bold uppercase tracking-widest mb-6">Servicios</h5>
-<ul class="space-y-4 text-white/60 text-sm">
-<li><a class="hover:text-primary transition-colors" href="#">SEO</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Paid Media</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Contenido</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-sm font-bold uppercase tracking-widest mb-6">Legal</h5>
-<ul class="space-y-4 text-white/60 text-sm">
-<li><a class="hover:text-primary transition-colors" href="#">Privacidad</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Cookies</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Aviso Legal</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-white/10">
-<p class="text-sm text-white/40">© 2026 RIFX MARKETING. Todos los derechos reservados.</p>
-<div class="flex items-center gap-6">
-<a class="text-white/40 hover:text-primary transition-colors flex items-center gap-1" href="#"><span class="material-symbols-outlined text-sm">public</span> Instagram</a>
-<a class="text-white/40 hover:text-primary transition-colors flex items-center gap-1" href="#"><span class="material-symbols-outlined text-sm">group</span> LinkedIn</a>
-<a class="text-white/40 hover:text-primary transition-colors flex items-center gap-1" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span> X</a>
+<div class="flex flex-col items-center md:items-end gap-2 text-xs text-gray-400">
+<p>Contact Us</p>
+<p>www.moonrmarketing.com</p>
+<div class="flex gap-3 mt-2">
+<!-- Social Icons Placeholders -->
+<div class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center hover:bg-space-orange transition-colors cursor-pointer">f</div>
+<div class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center hover:bg-space-orange transition-colors cursor-pointer">t</div>
+<div class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center hover:bg-space-orange transition-colors cursor-pointer">in</div>
+<div class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center hover:bg-space-orange transition-colors cursor-pointer">ig</div>
 </div>
 </div>
 </div>
 </footer>
+<!-- END: Footer -->
 </body></html>
