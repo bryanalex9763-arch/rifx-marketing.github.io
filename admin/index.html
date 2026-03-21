@@ -8,18 +8,16 @@
   </head>
   <body>
     <script>
-      // 2. Configuramos la conexión ANTES de cargar el panel
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", () => {
-          window.netlifyIdentity.setProxyUrl("https://rifx-marketing.netlify.app/.netlify/identity");
-        });
-
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
     </script>
-
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>
