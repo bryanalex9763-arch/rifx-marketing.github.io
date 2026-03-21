@@ -1,9 +1,9 @@
 backend:
-  name: github
-  repo: bryanalex9763-arch/rifx-marketing.github.io # CAMBIA ESTO POR TU REPO REAL
+  name: git-gateway
+  repo: bryanalex9763-arch/rifx-marketing.github.io
   branch: main
 
-media_folder: "images" # Donde se guardarán las fotos que subas
+media_folder: "images"
 public_folder: "/images"
 
 collections:
