@@ -8,6 +8,11 @@
   </head>
   <body>
     <script>
+      // ESTA LÍNEA FUERZA LA CONEXIÓN CON TU NETLIFY
+      window.netlifyIdentity.on("init", () => {
+        window.netlifyIdentity.setProxyUrl("https://rifx-marketing.netlify.app/.netlify/identity");
+      });
+
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
@@ -18,7 +23,6 @@
         });
       }
     </script>
-
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>
