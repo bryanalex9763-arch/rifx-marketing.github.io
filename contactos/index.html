@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary": "#8dcdff",
+                        "surface-container-high": "#222941",
+                        "primary-fixed-dim": "#ffb692",
+                        "surface-container-highest": "#2d344c",
+                        "surface": "#0b1229",
+                        "on-tertiary": "#00344f",
+                        "inverse-surface": "#dce1ff",
+                        "on-primary-container": "#552000",
+                        "secondary": "#bfc5e4",
+                        "outline-variant": "#584237",
+                        "on-secondary": "#292f48",
+                        "on-primary": "#552000",
+                        "surface-container": "#181e36",
+                        "outline": "#a78b7e",
+                        "on-secondary-fixed": "#141a32",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#dce1ff",
+                        "primary": "#F27121",
+                        "on-tertiary-fixed": "#001e30",
+                        "on-surface": "#ffffff",
+                        "surface-container-lowest": "#060d24",
+                        "tertiary-fixed-dim": "#8dcdff",
+                        "secondary-fixed-dim": "#bfc5e4",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#341100",
+                        "secondary-container": "#424862",
+                        "inverse-on-surface": "#292f48",
+                        "tertiary-container": "#00a0e8",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffdbcb",
+                        "surface-variant": "#2d344c",
+                        "inverse-primary": "#9f4200",
+                        "secondary-fixed": "#dce1ff",
+                        "surface-bright": "#323851",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#3f465f",
+                        "tertiary-fixed": "#cae6ff",
+                        "background": "#0b1229",
+                        "surface-tint": "#F27121",
+                        "on-primary-fixed-variant": "#793100",
+                        "surface-dim": "#0b1229",
+                        "on-secondary-container": "#b1b7d6",
+                        "on-tertiary-fixed-variant": "#004b70",
+                        "on-surface-variant": "#ffffff",
+                        "on-tertiary-container": "#00334d",
+                        "surface-container-low": "#141a32",
+                        "primary-container": "#F27121"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(45, 52, 76, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .rim-light {
+            box-shadow: inset 0 0.5px 0 0 rgba(255, 255, 255, 0.1);
+        }
+        .celestial-glow {
+            box-shadow: 0 0 40px rgba(242, 113, 33, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1229]/40 backdrop-blur-xl border-b border-white/10 shadow-[0_0_40px_rgba(242,113,33,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white uppercase font-headline">RF MOONR</div>
+<div class="hidden md:flex items-center gap-8 font-headline font-medium tracking-tight">
+<a class="text-white/70 hover:text-white transition-colors hover:text-[#F27121]" href="#">RIOG</a>
+<a class="text-white/70 hover:text-white transition-colors hover:text-[#F27121]" href="#">Servicios</a>
+<a class="text-white/70 hover:text-white transition-colors hover:text-[#F27121]" href="#">Sobre Nosotros</a>
+<a class="text-[#f27121] border-b-2 border-[#f27121] pb-1 hover:text-[#F27121]" href="#">Contacto</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-[#F27121] text-white px-6 py-2 rounded-xl font-headline font-bold text-sm uppercase tracking-wider hover:scale-105 active:scale-95 transition-all">
+                Get Started
+            </button>
+</div>
+</nav>
+<main class="pt-24 min-h-screen">
+<!-- Hero Section -->
+<section class="relative px-8 py-20 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none bg-[radial-gradient(circle_at_50%_50%,_#f2712122_0%,_transparent_70%)]"></div>
+<div class="max-w-screen-2xl mx-auto relative z-10">
+<div class="max-w-3xl">
+<span class="font-label text-primary uppercase tracking-[0.2em] text-sm mb-4 block">Communication Array Engaged</span>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter leading-none text-white mb-8">
+                        Contact <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#F27121]">Us</span>
+</h1>
+<p class="font-body text-xl text-white/70 max-w-xl leading-relaxed">
+                        Ready to launch your project into the digital stratosphere? Our mission control is standing by to translate your vision into celestial reality.
+                    </p>
+</div>
+</div>
+<!-- Decorative Orbit Element -->
+<div class="absolute -right-20 top-20 w-[500px] h-[500px] rounded-full border border-white/5 opacity-30 animate-pulse pointer-events-none"></div>
+</section>
+<!-- Contact Section -->
+<section class="px-8 pb-32">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Contact Form (Glassmorphism) -->
+<div class="lg:col-span-7 glass-card rim-light p-8 md:p-12 rounded-full celestial-glow">
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label text-sm uppercase tracking-widest text-white/50 ml-1">Identity Tag</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-white/10 p-4 text-white focus:ring-0 focus:border-primary bg-opacity-50 transition-all placeholder:text-white/20" placeholder="Full Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-sm uppercase tracking-widest text-white/50 ml-1">Sub-Space Frequency</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-white/10 p-4 text-white focus:ring-0 focus:border-primary bg-opacity-50 transition-all placeholder:text-white/20" placeholder="Email Address" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label text-sm uppercase tracking-widest text-white/50 ml-1">Mission Objective</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-white/10 p-4 text-white focus:ring-0 focus:border-primary bg-opacity-50 transition-all placeholder:text-white/20" placeholder="Subject" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-sm uppercase tracking-widest text-white/50 ml-1">Transmission Data</label>
+<textarea class="w-full bg-surface-container-lowest border-0 border-b border-white/10 p-4 text-white focus:ring-0 focus:border-primary bg-opacity-50 transition-all placeholder:text-white/20 resize-none" placeholder="Your Message..." rows="5"></textarea>
+</div>
+<button class="group flex items-center justify-center gap-3 w-full md:w-auto px-10 py-5 bg-gradient-to-br from-primary to-[#F27121] text-white font-headline font-bold text-lg rounded-xl shadow-lg hover:shadow-primary/20 transition-all active:scale-95" type="submit">
+                            Send Mission Control
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">rocket_launch</span>
+</button>
+</form>
+</div>
+<!-- Contact Details & Map -->
+<div class="lg:col-span-5 space-y-12">
+<div class="space-y-8">
+<div class="flex items-start gap-6 group">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center rim-light group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">explore</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-white mb-2">Orbital Base</h3>
+<p class="text-white/70 leading-relaxed">Celestial Sector 7G,<br/>Nebula District, Zenith City 10101</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center rim-light group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">settings_input_antenna</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-white mb-2">Interstellar Phone</h3>
+<p class="text-white/70 leading-relaxed">+1 (888) VOID-CALL<br/>+1 (555) MOON-LINE</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center rim-light group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">alternate_email</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-white mb-2">Sub-space Email</h3>
+<p class="text-white/70 leading-relaxed">missions@rfmoonr.space<br/>support@rfmoonr.space</p>
+</div>
+</div>
+</div>
+<!-- Stylized Map -->
+<div class="relative w-full aspect-video rounded-full overflow-hidden bg-surface-container-lowest rim-light">
+<div class="absolute inset-0 opacity-40 grayscale contrast-125" data-alt="Stylized dark architectural blueprint map of a lunar base" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXgWBZ0lMTLLugXf3MgbCnnZRkmeqON7buo5eF5dQPhvn5d0UzyOjKVk4eyjet0AUPwfSQDW7lZvSib0diCwjLVmNwPGtTGgzYah51ZmzNOpvZzrrlyFzBVIoa5aJnkqH7IhKM5JC4Tqj2ywZgBpx2GUtuv9RnfzPBOXH-_8RFsp9mQu6opCdBCtiE_3Z5QL9bJ2GTfTq3EUk24uDcWE6rar9kihLsrXZ8ZdwBSW09MUk7ud2uOzENjD2hkHYOi0uSZlPQJfX22x0'); background-size: cover; background-position: center;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/20 rounded-full animate-ping"></div>
+<div class="w-4 h-4 bg-primary rounded-full relative z-10 shadow-[0_0_15px_#F27121]"></div>
+</div>
+<div class="ml-4 bg-surface-container-highest/90 backdrop-blur-md px-4 py-2 rounded-lg rim-light border border-white/5">
+<span class="font-headline font-bold text-xs uppercase tracking-tighter text-white">Orbit Base 1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full py-20 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1">
+<div class="text-xl font-bold text-slate-50 mb-4 font-['Inter']">ORBITAL DIGITAL</div>
+<p class="font-['Inter'] text-sm text-slate-400">© 2024 Orbital Digital. All systems operational.</p>
+</div>
+<div class="col-span-1">
+<h4 class="text-orange-500 font-bold mb-4 font-['Inter'] text-sm uppercase">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-orange-500 transition-colors text-sm font-['Inter']" href="#">Services</a></li>
+<li><a class="text-slate-500 hover:text-orange-500 transition-colors text-sm font-['Inter']" href="#">About Us</a></li>
+<li><a class="text-slate-500 hover:text-orange-500 transition-colors text-sm font-['Inter']" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-orange-500 font-bold mb-4 font-['Inter'] text-sm uppercase">Contact Info</h4>
+<ul class="space-y-2">
+<li class="text-slate-500 text-sm font-['Inter']">missions@orbital.digital</li>
+<li class="text-slate-500 text-sm font-['Inter']">+1 (888) ORB-TAL1</li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-orange-500 font-bold mb-4 font-['Inter'] text-sm uppercase">Socials</h4>
+<div class="flex gap-4">
+<a class="text-slate-500 hover:text-orange-500 transition-colors" href="#">TikTok</a>
+<a class="text-slate-500 hover:text-orange-500 transition-colors" href="#">Facebook</a>
+<a class="text-slate-500 hover:text-orange-500 transition-colors" href="#">YouTube</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

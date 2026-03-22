@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#8dcdff",
+              "surface-container-high": "#222941",
+              "inverse-on-surface": "#292f48",
+              "surface-variant": "#2d344c",
+              "surface-bright": "#323851",
+              "background": "#0b1229",
+              "on-tertiary-container": "#00334d",
+              "on-secondary-fixed-variant": "#3f465f",
+              "inverse-surface": "#dce1ff",
+              "on-background": "#dce1ff",
+              "on-secondary-fixed": "#141a32",
+              "primary-fixed-dim": "#ffb692",
+              "secondary-container": "#424862",
+              "on-tertiary-fixed": "#001e30",
+              "tertiary-container": "#00a0e8",
+              "inverse-primary": "#9f4200",
+              "surface-container": "#181e36",
+              "surface": "#0b1229",
+              "on-surface": "#dce1ff",
+              "surface-container-highest": "#2d344c",
+              "on-tertiary": "#00344f",
+              "on-primary": "#552000",
+              "on-error-container": "#ffdad6",
+              "primary-container": "#f27121",
+              "on-primary-fixed-variant": "#793100",
+              "primary": "#ffb692",
+              "secondary": "#bfc5e4",
+              "on-primary-fixed": "#341100",
+              "outline-variant": "#584237",
+              "on-secondary-container": "#b1b7d6",
+              "on-secondary": "#292f48",
+              "secondary-fixed-dim": "#bfc5e4",
+              "tertiary-fixed-dim": "#8dcdff",
+              "secondary-fixed": "#dce1ff",
+              "primary-fixed": "#ffdbcb",
+              "on-error": "#690005",
+              "surface-container-low": "#141a32",
+              "on-tertiary-fixed-variant": "#004b70",
+              "on-surface-variant": "#dfc0b2",
+              "on-primary-container": "#541f00",
+              "surface-tint": "#ffb692",
+              "surface-dim": "#0b1229",
+              "error-container": "#93000a",
+              "tertiary-fixed": "#cae6ff",
+              "surface-container-lowest": "#060d24",
+              "outline": "#a78b7e",
+              "error": "#ffb4ab"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-nebula {
+            background: radial-gradient(circle at 20% 30%, rgba(242, 113, 33, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(255, 182, 146, 0.1) 0%, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0b1229]/40 backdrop-blur-xl border-b border-white/10 shadow-[0px_0px_40px_0px_rgba(255,182,146,0.06)] flex justify-between items-center px-8 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#ffb692]" data-icon="rocket_launch">rocket_launch</span>
+<span class="text-2xl font-bold tracking-tighter text-[#f27121] font-headline uppercase tracking-widest">AETHERIC</span>
+</div>
+<button class="hover:bg-white/5 transition-all duration-300 p-2 rounded-lg active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#ffb692]" data-icon="menu">menu</span>
+</button>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[530px] flex flex-col items-center justify-center px-6 py-20 text-center bg-nebula overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none" data-alt="Deep space nebula with star clusters and orange gas clouds">
+<div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-container/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-[150px]"></div>
+</div>
+<div class="relative z-10">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-4 block">Archive 033</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-on-background leading-none mb-6">
+                    Portfolio <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Galáctico</span>
+</h1>
+<p class="max-w-xs mx-auto text-on-surface-variant text-sm leading-relaxed mb-8">
+                    Explora nuestras misiones ejecutadas con éxito en el vasto vacío del marketing digital.
+                </p>
+<div class="w-px h-16 bg-gradient-to-b from-primary/50 to-transparent mx-auto"></div>
+</div>
+</section>
+<!-- Proyectos en Órbita -->
+<section class="px-6 py-20 bg-surface-container-low">
+<div class="mb-12">
+<h2 class="font-headline text-3xl font-bold mb-2">Proyectos en Órbita</h2>
+<div class="h-1 w-12 bg-primary-container"></div>
+</div>
+<div class="flex flex-col gap-8">
+<!-- Project Card 1 -->
+<div class="group relative overflow-hidden bg-surface-variant/40 backdrop-blur-xl rounded-xl border border-white/5 p-1">
+<div class="aspect-video overflow-hidden rounded-lg mb-4">
+<img alt="Campaña Marte 2024" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Red planet Mars landscape with high tech settlements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAayrXaLm6XsvDcDKIKK8kMYwQ2VeNjcVH4tJ-tiwIJ_bQx15qAo15wUEOR4VuWhX1-vUsOP_2tInvGPtos3Rfm1cFsGX8y8Vi7rVqR43p2Px6lSHTITK99TzwCdyQrJY6ihiykeHOr2Z7cfSg0S07YMNMo1Alx6CUquWcBJ4bugx7nQkq0_EMHa5Xr0XBNp6KUn_TsGpgLFj6vnEfyZQqDxhuont9uYlvj9c8ZhJcVv4LC9Oe4zjWrmeC2dGAOR-CFbOqfue08Y0k"/>
+</div>
+<div class="p-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary-container mb-2 block">Branding &amp; Strategy</span>
+<h3 class="font-headline text-xl font-bold mb-3">Campaña Marte 2024</h3>
+<p class="text-sm text-on-surface-variant mb-6">Posicionamiento de marca interestelar para la primera colonia civil.</p>
+<a class="inline-flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-tighter hover:gap-4 transition-all" href="#">
+                            Ver Misión <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group relative overflow-hidden bg-surface-variant/40 backdrop-blur-xl rounded-xl border border-white/5 p-1">
+<div class="aspect-video overflow-hidden rounded-lg mb-4">
+<img alt="SEO Orbital" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Satellite earth view with digital data layers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3fpTB4QiPSDZoZoCnkXWj8vgMJ436xH-gpwY6znfPeLjnLOddlCqh1Rs7XAZVYERxhkzZa5nGUGNuKwSt0-l8NjYCnxNiGaPiH3aE1r9jbJKG6qwEdOYm-4wq8g7-Hz-gCSpbB86arB1XBSt-nO8K9qGel6fSUpdaKbt0Gil7wUM-5TA1Cudv_-YplYWzLfM-GyChblJ2Rwb4kMj3nxPvD5XQZ-1SSJS2C2E5lk7difyxa9fL-iGEd-1cIm7qEu8qSX_qSX7E4rk"/>
+</div>
+<div class="p-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary-container mb-2 block">Performance Marketing</span>
+<h3 class="font-headline text-xl font-bold mb-3">SEO Orbital</h3>
+<p class="text-sm text-on-surface-variant mb-6">Indexación de datos en tiempo real a través de redes satelitales.</p>
+<a class="inline-flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-tighter hover:gap-4 transition-all" href="#">
+                            Ver Misión <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group relative overflow-hidden bg-surface-variant/40 backdrop-blur-xl rounded-xl border border-white/5 p-1">
+<div class="aspect-video overflow-hidden rounded-lg mb-4">
+<img alt="Deep Space Ads" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Floating digital billboards in asteroid field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFvFUScfhC8ZnC_ScwYKghlCCWHVzm8r0ruv2ZNUSOWzXzn2My3vVtaWKuBnctfIm0kmv9wpJ_DhpIwIWg9HYDk5STu4481MrQqQLQVfftoaBACyb97Ej7PkugGkrtFCbInNLSlY6G15MKhlRDwdzCbI_TlITzwEFkthLeGujPoqfo0CsTRfzbLq17VW80LDztO-lD437YbQlSBQULcaKEgDJqCmmcWqpRy1KVcbREAIvSVNU7jY9uSpDA2L4md7qHPKdBK3Vv_xk"/>
+</div>
+<div class="p-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary-container mb-2 block">Creative Design</span>
+<h3 class="font-headline text-xl font-bold mb-3">Deep Space Ads</h3>
+<p class="text-sm text-on-surface-variant mb-6">Publicidad proyectada en nebulosas para máxima visibilidad galáctica.</p>
+<a class="inline-flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-tighter hover:gap-4 transition-all" href="#">
+                            Ver Misión <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Nuestra Trayectoria -->
+<section class="px-6 py-20 bg-surface">
+<div class="mb-16 text-center">
+<h2 class="font-headline text-3xl font-bold">Nuestra Trayectoria</h2>
+<p class="text-on-surface-variant text-sm mt-4">Hitos de nuestra navegación cósmica.</p>
+</div>
+<div class="relative pl-8 border-l border-white/10 space-y-16">
+<!-- Timeline Item 1 -->
+<div class="relative">
+<div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-primary-container border-4 border-background shadow-[0_0_15px_rgba(242,113,33,0.5)]"></div>
+<span class="font-headline text-4xl font-black text-white/10 absolute -top-4 left-4">2020</span>
+<div class="relative z-10 pt-4">
+<h4 class="font-bold text-primary mb-2">Despegue Inicial</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Fundación de Aetheric en el sector Alpha-7. Primera agencia de marketing interplanetario.</p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
+<span class="font-headline text-4xl font-black text-white/10 absolute -top-4 left-4">2021</span>
+<div class="relative z-10 pt-4">
+<h4 class="font-bold text-primary mb-2">Expansión Lunar</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Apertura de oficinas en el Mar de la Tranquilidad. Lanzamiento de campañas de gravedad cero.</p>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative">
+<div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-primary-container border-4 border-background shadow-[0_0_15px_rgba(242,113,33,0.5)]"></div>
+<span class="font-headline text-4xl font-black text-white/10 absolute -top-4 left-4">2023</span>
+<div class="relative z-10 pt-4">
+<h4 class="font-bold text-primary mb-2">Supremacía Digital</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Liderazgo en algoritmos de búsqueda cuántica y redes de fibra interestelar.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Systems -->
+<section class="px-6 py-20 bg-surface-container-high">
+<div class="mb-12">
+<h2 class="font-headline text-3xl font-bold">Core Systems</h2>
+<div class="h-1 w-12 bg-primary"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<!-- Progress 1 -->
+<div class="flex flex-col items-center p-6 bg-surface-container-highest rounded-2xl border border-white/5">
+<div class="relative w-20 h-20 mb-4 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle cx="40" cy="40" fill="transparent" r="36" stroke="rgba(255,255,255,0.05)" stroke-width="6"></circle>
+<circle class="text-primary-container" cx="40" cy="40" fill="transparent" r="36" stroke="currentColor" stroke-dasharray="226.19" stroke-dashoffset="22.62" stroke-width="6"></circle>
+</svg>
+<span class="absolute font-headline font-bold text-sm">90%</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Estrategia</span>
+</div>
+<!-- Progress 2 -->
+<div class="flex flex-col items-center p-6 bg-surface-container-highest rounded-2xl border border-white/5">
+<div class="relative w-20 h-20 mb-4 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle cx="40" cy="40" fill="transparent" r="36" stroke="rgba(255,255,255,0.05)" stroke-width="6"></circle>
+<circle class="text-primary" cx="40" cy="40" fill="transparent" r="36" stroke="currentColor" stroke-dasharray="226.19" stroke-dashoffset="56.55" stroke-width="6"></circle>
+</svg>
+<span class="absolute font-headline font-bold text-sm">75%</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Guerrilla</span>
+</div>
+<!-- Progress 3 -->
+<div class="col-span-2 flex flex-col items-center p-6 bg-surface-container-highest rounded-2xl border border-white/5">
+<div class="relative w-20 h-20 mb-4 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle cx="40" cy="40" fill="transparent" r="36" stroke="rgba(255,255,255,0.05)" stroke-width="6"></circle>
+<circle class="text-primary-container" cx="40" cy="40" fill="transparent" r="36" stroke="currentColor" stroke-dasharray="226.19" stroke-dashoffset="11.31" stroke-width="6"></circle>
+</svg>
+<span class="absolute font-headline font-bold text-sm">95%</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Análisis</span>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="px-6 py-24 text-center">
+<div class="bg-gradient-to-br from-primary/10 to-transparent p-12 rounded-[2.5rem] border border-primary/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-20">
+<span class="material-symbols-outlined text-6xl" data-icon="star">star</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-6">Lanza tu Proyecto con Nosotros</h3>
+<p class="text-sm text-on-surface-variant mb-10 leading-relaxed max-w-xs mx-auto">¿Listo para que tu marca rompa la atmósfera? Iniciemos la cuenta regresiva hoy mismo.</p>
+<button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold uppercase tracking-widest rounded-xl shadow-[0_10px_30px_rgba(242,113,33,0.3)] active:scale-95 transition-transform">
+                    Iniciar Secuencia
+                </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0b1229] border-t border-white/5 py-20 px-8 flex flex-col items-center gap-8 w-full text-center">
+<div class="font-space-grotesk text-[#ffb692] flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-black text-xl tracking-tighter">AETHERIC ORBIT</span>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="text-white/40 hover:text-[#f27121] transition-colors text-xs uppercase tracking-widest" href="#">Privacy Protocol</a>
+<a class="text-white/40 hover:text-[#f27121] transition-colors text-xs uppercase tracking-widest" href="#">Signal Frequency</a>
+<a class="text-white/40 hover:text-[#f27121] transition-colors text-xs uppercase tracking-widest" href="#">Navigation Map</a>
+</nav>
+<div class="w-12 h-px bg-white/10"></div>
+<p class="font-inter text-xs uppercase tracking-widest text-white/50 leading-loose max-w-xs">
+                © 2024 Aetheric Orbit. <br/> Engineered in the Deep Navy Void.
+            </p>
+</footer>
+</main>
+<!-- Navigation Drawer (Side) - Hidden by default, showing layout for completeness -->
+<aside class="hidden fixed right-0 top-0 h-full w-64 z-[60] p-6 bg-[#141a32] font-space-grotesk text-sm tracking-tight border-l border-white/5">
+<div class="flex justify-between items-center mb-12">
+<span class="text-[#ffb692] font-black">NAVIGATION</span>
+<span class="material-symbols-outlined text-white/40" data-icon="close">close</span>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 p-4 text-[#f27121] bg-[#222941] rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span> Orbit
+            </a>
+<a class="flex items-center gap-4 p-4 text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span> Expeditions
+            </a>
+<a class="flex items-center gap-4 p-4 text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span> Timeline
+            </a>
+<a class="flex items-center gap-4 p-4 text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="memory">memory</span> Tech-Stack
+            </a>
+</nav>
+</aside>
+</body></html>
