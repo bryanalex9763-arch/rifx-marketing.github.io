@@ -52,7 +52,7 @@
 
 <body class="bg-white text-gray-900 overflow-x-hidden">
 
-<header class="absolute top-0 left-0 right-0 z-50">
+<header id="main-header" class="absolute top-0 left-0 right-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-2">
             <div class="w-10 h-10 bg-rocket-orange rounded-full flex items-center justify-center">
@@ -101,6 +101,29 @@
         </div>
     </div>
 </section>
+
+<footer id="main-footer"></footer>
+
+<script>
+  function incluirComponente(id, url) {
+    fetch(url)
+      .then(respuesta => {
+        if (respuesta.ok) return respuesta.text();
+        throw new Error("No se pudo cargar: " + url);
+      })
+      .then(html => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = html;
+      })
+      .catch(err => console.error(err));
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    // Solo carga si el archivo existe en tu servidor
+    incluirComponente('main-header', '/nav.html');
+    incluirComponente('main-footer', '/footer-content.html');
+  });
+</script>
 
 </body>
 </html>
