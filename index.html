@@ -1,3 +1,8 @@
+---
+title: "¡TU MARCA NECESITA UN LANZAMIENTO ESPACIAL!"
+description: "Marketing digital de vanguardia que te hace brillar. Es hora de despegar."
+btn_text: "¡Lanza Mi Campaña! 🚀"
+---
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -60,10 +65,10 @@
 <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center">
 <div class="w-full lg:w-1/2 z-10 text-center lg:text-left">
 <h1 class="text-white text-3xl md:text-5xl lg:text-6xl font-black leading-tight mb-4 lg:mb-6">
-          ¡TU MARCA NECESITA<br/> UN LANZAMIENTO<br/> ESPACIAL!
+          {{title}}
         </h1>
 <p class="text-gray-300 text-base md:text-lg mb-8 max-w-md mx-auto lg:mx-0">
-          Marketing digital de vanguardia que te hace brillar. Es hora de despegar.
+          {{description}}
         </p>
 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl max-w-md mx-auto lg:mx-0" data-purpose="lead-form">
 <h2 class="text-space-navy font-bold text-base md:text-lg mb-4">SOLICITA TU ESTRATEGIA ESTELAR GRATUITA.</h2>
@@ -75,7 +80,7 @@
 <input class="w-full rounded-lg border-gray-300 focus:ring-rocket-orange focus:border-rocket-orange text-sm p-3" placeholder="Sitio Web" type="url"/>
 <textarea class="w-full rounded-lg border-gray-300 focus:ring-rocket-orange focus:border-rocket-orange text-sm p-3" placeholder="Mensaje" rows="3"></textarea>
 <button class="w-full bg-rocket-orange text-white font-bold py-4 rounded-xl hover-rocket-orange transition-all shadow-lg flex items-center justify-center gap-2 text-base" type="submit">
-              ¡Lanza Mi Campaña! 🚀
+              {{btn_text}}
             </button>
 </form>
 </div>
