@@ -1,9 +1,9 @@
 import { defineConfig } from "tinacms";
 
 export default defineConfig({
-  branch: "main", // Revisa si tu rama es 'main' o 'master'
-  clientId: "10561aba-f9f7-4e3d-a8fa-d0149e35ca1b", // Tu ID de la captura
-  token: "GENERA_UN_TOKEN_EN_LA_PESTAÑA_TOKENS", 
+  branch: "main", // Asegúrate de que tu rama se llame 'main' o cámbialo si es 'master'
+  clientId: "10561aba-f9f7-4e3d-a8fa-d0149e35ca1b", 
+  token: "PEGA_AQUÍ_TU_TOKEN", // Lo obtienes en la pestaña 'Tokens' o 'Fichas' de TinaCloud
   build: {
     outputFolder: "admin",
     publicFolder: "./",
@@ -24,7 +24,7 @@ export default defineConfig({
         fields: [
           { type: "string", name: "title", label: "Título Principal" },
           { type: "string", name: "description", label: "Descripción", ui: { component: "textarea" } },
-          { type: "string", name: "btn_text", label: "Texto Botón" },
+          { type: "string", name: "btn_text", label: "Texto del Botón" },
         ],
       },
     ],
