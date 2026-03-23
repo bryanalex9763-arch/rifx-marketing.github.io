@@ -1,11 +1,13 @@
 {
   "name": "rifx-marketing",
   "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
     "build": "tinacms build"
   },
   "dependencies": {
-    "tinacms": "latest",
-    "@tinacms/cli": "latest"
+    "tinacms": "^2.0.0",
+    "@tinacms/cli": "^2.0.0"
   }
 }
