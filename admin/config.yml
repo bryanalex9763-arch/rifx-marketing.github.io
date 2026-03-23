@@ -3,17 +3,53 @@ backend:
   repo: bryanalex9763-arch/rifx-marketing.github.io
   branch: main
 
-media_folder: "imágenes"
-public_folder: "/imágenes"
+media_folder: "images"
+public_folder: "/images"
 
 collections:
-  - name: "páginas"
+  - name: "pages"
     label: "Páginas"
     files:
-      - file: "índice.html"
+      - file: "index.html"
         label: "Inicio"
-        name: "índice"
+        name: "home"
         fields:
-          - { label: "Título Principal", name: "title", widget: "string" }
-          - { label: "Descripción Hero", name: "description", widget: "text" }
-          - { label: "Color de Fondo", name: "bg_color", widget: "color" }
+          - label: "Enlaces de Navegación"
+            name: "nav_links"
+            widget: "list"
+            fields:
+              - { label: "Texto del Botón", name: "label", widget: "string" }
+              - { label: "Enlace (ej: /servicios/)", name: "url", widget: "string" }
+
+          - label: "Sección Principal (Hero)"
+            name: "hero_section"
+            widget: "object"
+            fields:
+              - { label: "Título Principal", name: "hero_title", widget: "string" }
+              - { label: "Descripción", name: "hero_description", widget: "text" }
+              - { label: "Imagen del Astronauta", name: "hero_image", widget: "image" }
+          
+          - label: "Nuestros Servicios"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Emoji", name: "icon", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "desc", widget: "text" }
+
+          - label: "Testimonios"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Cargo", name: "role", widget: "string" }
+              - { label: "Cita", name: "quote", widget: "text" }
+              - { label: "Foto", name: "img", widget: "image" }
+
+          - label: "Logos de Marcas (Nombres)"
+            name: "brands"
+            widget: "list"
+            fields:
+              - { label: "Nombre", name: "name", widget: "string" }
+
+          - { label: "WhatsApp de Contacto", name: "phone_number", widget: "string" }
