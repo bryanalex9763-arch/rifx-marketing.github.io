@@ -309,16 +309,17 @@ btn_text: "¡Lanza Mi Campaña! 🚀"
 </div>
 </footer>
 
+<script src="https://unpkg.com/tinacms/dist/sidebar.js"></script>
 <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
+  // Esto activa el modo "Canva" para que detecte tus campos
+  window.addEventListener('tinacms:ready', () => {
+    const tina = window.TinaCMS;
+    tina.registerApi('tina', new tina.Client({
+      clientId: 'TU_CLIENT_ID',
+      token: 'TU_TOKEN',
+      branch: 'principal'
+    }));
+  });
 </script>
 </body>
 </html>
