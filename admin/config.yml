@@ -3,17 +3,20 @@ backend:
   repo: bryanalex9763-arch/rifx-marketing.github.io
   branch: main
 
+# Configuración de imágenes para tu agencia
 media_folder: "images"
 public_folder: "/images"
 
+# Esto activa la edición directa sobre los archivos
 collections:
   - name: "paginas"
-    label: "Contenido de la Agencia"
+    label: "Páginas de la Agencia"
     files:
       - file: "index.html"
-        label: "Página de Inicio"
+        label: "Página de Inicio (Landing)"
         name: "index"
         fields:
-          - { label: "Título Principal", name: "title", widget: "string" }
-          - { label: "Descripción Hero", name: "description", widget: "text" }
-          - { label: "Texto del Botón", name: "btn_text", widget: "string" }
+          - { label: "Título Principal (Hero)", name: "title", widget: "string", default: "¡Tu marca necesita un lanzamiento espacial!" }
+          - { label: "Descripción / Slogan", name: "description", widget: "text", default: "Marketing digital de vanguardia que te hace brillar." }
+          - { label: "Texto del Botón Principal", name: "btn_text", widget: "string", default: "¡LANZA MI CAMPAÑA! 🚀" }
+          - { label: "Imagen del Astronauta", name: "hero_image", widget: "image" }
