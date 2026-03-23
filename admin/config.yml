@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: bryanalex9763-arch/rifx-marketing.github.io # Asegúrate que sea tu repo
+  repo: bryanalex9763-arch/rifx-marketing.github.io # Confirma que este sea tu usuario/repo
   branch: main
 
 media_folder: "images"
@@ -8,10 +8,10 @@ public_folder: "/images"
 
 collections:
   - name: "paginas"
-    label: "Páginas"
+    label: "Páginas del Sitio"
     files:
       - file: "index.html"
-        label: "Página de Inicio"
+        label: "Editar Página de Inicio"
         name: "index"
         fields:
-          - { label: "Cuerpo de la página (HTML)", name: "body", widget: "markdown" }
+          - { label: "Código HTML Completo", name: "body", widget: "code", default_language: "html" }
