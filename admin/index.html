@@ -9,6 +9,7 @@
 </head>
 <body>
   <script>
+    // Script para que al loguearte te redirija correctamente
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
         if (!user) {
@@ -18,6 +19,8 @@
         }
       });
     }
+
+    // REGISTRO DE VISTA PREVIA: Esto hace que Tailwind funcione en el panel
     CMS.registerPreviewStyle("https://cdn.tailwindcss.com");
   </script>
 </body>
