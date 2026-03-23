@@ -6,15 +6,13 @@ backend:
 media_folder: "images"
 public_folder: "/images"
 
-# Esto organiza el panel para que sea fácil de usar
 collections:
   - name: "paginas"
-    label: "Páginas de la Agencia"
+    label: "Páginas"
     files:
       - file: "index.html"
-        label: "Página de Inicio"
+        label: "Inicio"
         name: "index"
         fields:
-          - { label: "Título Principal", name: "title", widget: "string" }
-          - { label: "Descripción Hero", name: "description", widget: "text" }
-          - { label: "Texto del Botón", name: "btn_text", widget: "string" }
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
