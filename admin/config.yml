@@ -7,13 +7,13 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "paginas"
-    label: "Contenido de la Agencia"
+  - name: "config"
+    label: "Configuración Web"
     files:
-      - file: "index.html"
-        label: "Página de Inicio"
-        name: "index"
+      - file: "data.json"
+        label: "Textos de Inicio"
+        name: "inicio"
         fields:
           - { label: "Título Principal", name: "title", widget: "string" }
-          - { label: "Descripción Hero", name: "description", widget: "text" }
-          - { label: "Texto del Botón", name: "btn_text", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+          - { label: "Texto Botón", name: "btn_text", widget: "string" }
