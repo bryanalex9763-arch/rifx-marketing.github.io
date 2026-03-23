@@ -1,55 +1,17 @@
 backend:
   name: git-gateway
-  repo: bryanalex9763-arch/rifx-marketing.github.io
+  repo: bryanalex9763-arch/rifx-marketing.github.io # Asegúrate que sea tu repo
   branch: main
 
 media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "pages"
+  - name: "paginas"
     label: "Páginas"
     files:
       - file: "index.html"
-        label: "Inicio"
-        name: "home"
+        label: "Página de Inicio"
+        name: "index"
         fields:
-          - label: "Enlaces de Navegación"
-            name: "nav_links"
-            widget: "list"
-            fields:
-              - { label: "Texto del Botón", name: "label", widget: "string" }
-              - { label: "Enlace (ej: /servicios/)", name: "url", widget: "string" }
-
-          - label: "Sección Principal (Hero)"
-            name: "hero_section"
-            widget: "object"
-            fields:
-              - { label: "Título Principal", name: "hero_title", widget: "string" }
-              - { label: "Descripción", name: "hero_description", widget: "text" }
-              - { label: "Imagen del Astronauta", name: "hero_image", widget: "image" }
-          
-          - label: "Nuestros Servicios"
-            name: "services"
-            widget: "list"
-            fields:
-              - { label: "Emoji", name: "icon", widget: "string" }
-              - { label: "Título", name: "title", widget: "string" }
-              - { label: "Descripción", name: "desc", widget: "text" }
-
-          - label: "Testimonios"
-            name: "testimonials"
-            widget: "list"
-            fields:
-              - { label: "Nombre", name: "name", widget: "string" }
-              - { label: "Cargo", name: "role", widget: "string" }
-              - { label: "Cita", name: "quote", widget: "text" }
-              - { label: "Foto", name: "img", widget: "image" }
-
-          - label: "Logos de Marcas (Nombres)"
-            name: "brands"
-            widget: "list"
-            fields:
-              - { label: "Nombre", name: "name", widget: "string" }
-
-          - { label: "WhatsApp de Contacto", name: "phone_number", widget: "string" }
+          - { label: "Cuerpo de la página (HTML)", name: "body", widget: "markdown" }
