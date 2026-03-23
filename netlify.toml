@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  command = "npx @tinacms/cli@latest build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self' 'unsafe-eval' 'unsafe-inline' https: data: blob:; img-src 'self' data: blob: https:; connect-src 'self' https://*.tina.io https://*.tinajs.io wss://*.tina.io https:;"
