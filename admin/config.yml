@@ -3,16 +3,17 @@ backend:
   repo: bryanalex9763-arch/rifx-marketing.github.io
   branch: main
 
-media_folder: "images"
-public_folder: "/images"
+media_folder: "imágenes"
+public_folder: "/imágenes"
 
 collections:
-  - name: "paginas"
-    label: "Paginas"
+  - name: "páginas"
+    label: "Páginas"
     files:
-      - file: "index.html"
+      - file: "índice.html"
         label: "Inicio"
-        name: "index"
+        name: "índice"
         fields:
-          - { label: "Titulo", name: "title", widget: "string" }
-          - { label: "Descripcion", name: "description", widget: "text" }
+          - { label: "Título Principal", name: "title", widget: "string" }
+          - { label: "Descripción Hero", name: "description", widget: "text" }
+          - { label: "Color de Fondo", name: "bg_color", widget: "color" }
