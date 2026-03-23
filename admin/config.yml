@@ -8,7 +8,7 @@ public_folder: "/images"
 
 collections:
   - name: "paginas"
-    label: "Páginas de la Agencia"
+    label: "Contenido de la Agencia"
     files:
       - file: "index.html"
         label: "Página de Inicio"
